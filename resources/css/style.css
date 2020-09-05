@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/DR.jpg);
+    background-size: cover;
+    font-family: Roboto;
+}
+.container{
+    width: 1300px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    padding: 0px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 20px;
+    box-sizing:border-box;
+}
+.container .box{
+    background: #fff;
+    position: relative;
+    padding: 20px 20px 30px;
+    margin: 400px 0px 0px ;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 40px 40px #fff,
+               -20px -40px 40px rgb(126, 135, 138);
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.container .box:nth-child(1){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.5),rgb(100, 234, 255,0.5));
+}
+.container .box:nth-child(2){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.5),rgba(82, 124, 131, 0.5));
+}
+.container .box:nth-child(3){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.5),rgb(100, 234, 255,0.5));
+}
+.container .box:nth-child(4){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.5),rgb(100, 234, 255,0.5));
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+.title{
+    color: white;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: 700;
+  }
+  
+header ul{
+    position: relative;
+    display: flex;
+  }
+  
+header ul li{
+    position: relative;
+    list-style: none;
+  }
+  
+header ul li a{
+    position: relative;
+    padding: 5px 15px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  
+header ul li a:hover{
+    border-bottom: 3px solid red;
+    color: red;
+  }
+
+.box::after{
+      content: '';
+      display: block;
+      width:0px;
+      height: 2px;
+      background: #000;
+      transition: width .3s ease;
+}
+
+.box:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wave{
+    position: absolute;
+    left:0;
+    right:0;
+}
+
+.box:hover{
+    transform: scale(0.8);
+}
