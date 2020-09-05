@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap);
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/DR.jpg);
+    background-size: cover;
+}
+.container{
+    width: 1300px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    padding: 0px 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 25px;
+    box-sizing:border-box;
+}
+.container .box{
+    background: #fff;
+    position: relative;
+    padding: 30px 40px 50px;
+    margin: 200px 0px 0px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.container .box:nth-child(1){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.8),rgb(100, 234, 255,0.8));
+}
+.container .box:nth-child(2){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.8),rgba(100, 234, 255, 0.8));
+}
+.container .box:nth-child(3){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.8),rgb(100, 234, 255,0.8));
+}
+.container .box:nth-child(4){
+    background: linear-gradient(45deg,rgb(3, 110, 183,0.8),rgb(100, 234, 255,0.8));
+}
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+header{
+position: fixed;
+width: 100%;
+height: 75px;
+padding: 0px 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #0099ff;
+z-index: 1;
+font-family: Roboto;
+}
+
+header ul{
+position: relative;
+display: flex;
+}
+
+header ul li{
+position: relative;
+list-style: none;
+}
+
+header ul li a{
+position: relative;
+padding: 10px 15px;
+color: white;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+font-weight: 400;
+font-family: Roboto;
+}
+
+header ul li a:hover{
+border-bottom: 3px solid red;
+color: red;
+}
+
+.box::after{
+      content: '';
+      display: block;
+      width:0px;
+      height: 2px;
+      background: #000;
+      transition: width .3s ease;
+}
+
+.box:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wave{
+    position: absolute;
+    left:0;
+    right:0;
+    z-index: -1;
+}
+
+.box:hover{
+    transform: scale(0.8);
+}
+
+section{
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+  }
+
+#Team{
+    background: #fff;
+  }
+
+footer{
+      background: rgb(255, 255, 255);
+      text-decoration: none;
+      color: black;
+}
+
+.con{
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 500px;
+    perspective: 800;
+    -webkit-perspective: 800;
+    font-family: 'Inconsolata', monospace;
+}
+
+.card{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+    transition: all 2s ease;
+    border-radius: 10px;
+    box-shadow: 10px 10px #68666b,
+                -10px -10px #68666b;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+
+}
+
+.back{
+    background: white;
+    position: relative;
+    bottom: 325px;
+    transform: rotateY(180deg);
+}
+
+.front,.back{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.backside{
+    font-weight: 700;
+    font-family: 'Inconsolata', monospace;
+    margin: 5px 15px;
+}
+
+#Team{
+    padding: 40px;
+}
+
+.name{
+    margin: 40px 20px 0px 60px;
+    border-radius: 50%;
+}
+
+.front{
+    background-size: 20px;
+
+}
+
+.icons{
+    margin: 0 30px;
+}
+.con1{
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    margin: auto;
+    left: 500px;
+    bottom:0px;
+    perspective: 800;
+    -webkit-perspective: 800;
+    font-family: 'Inconsolata', monospace;
+}
+
+.custom-shape-divider-top-1599319301 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1599319301 svg {
+    position: relative;
+    display: block;
+    width: calc(100%+ 10px);
+    height: 350px;
+}
+
+.custom-shape-divider-top-1599319301 .shape-fill {
+    fill: #0099FF;
+}
