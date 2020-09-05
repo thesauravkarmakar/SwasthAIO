@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Portal</title>
+
+     <!-- BOOTSTRAP & JQUERY -->    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+            
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="design_files/css/style.css">
+
+</head>
+<body>
+    <div class="wrapper" style="background-image: url('resources/img/portal_background.jpg')">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="resources/img/portal_signup_left.jpg">
+            </div>
+
+            <form action="">
+                <div class="form-wrapper">
+                    <input id="email" type="email" placeholder="Email ID" class="form-control">
+                    <i class="zmdi zmdi-email"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input id="password" type="password" placeholder="Password" class="form-control">
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <div class="form-group container-login100-form-btn">
+                    <button id="btn-login" type="button"  onclick="signIn()" >
+                        Login
+                        <i class="zmdi zmdi-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="w-full text-center p-t-27 p-b-239">
+                    <span class="text-muted">
+                        Forgot 
+                    </span>
+                    <a href="forgetPassword.html" class="text-dark">
+                        Username or Password?
+                    </a>       
+                </div>
+                <div class="w-full text-center" style="margin-top: 35%; font-size: 15px;">
+                    <a href="signup.html" class="text-dark">
+                        Not have an account? Sign Up
+                    </a>       
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAfkFk5yr_SBWm99EB2b3A7oAq5gAOTprY",
+          authDomain: "swasthai-9e4a8.firebaseapp.com",
+          databaseURL: "https://swasthai-9e4a8.firebaseio.com",
+          projectId: "swasthai-9e4a8",
+          storageBucket: "swasthai-9e4a8.appspot.com",
+          messagingSenderId: "164428875159",
+          appId: "1:164428875159:web:c9349dd2a60458aa1df0d2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var login=document.getElementById("btn-login")
+        var emailLogin=document.getElementById("email")
+        var passwordLogin=document.getElementById("password")
+
+        login.onclick = function() {
+            login.disabled=true;
+            login.textContent="Logging In...Please Wait!"
+            firebase.auth().signInWithEmailAndPassword(emailLogin.value,passwordLogin.value).then(function(response)
+            {
+                console.log(response);
+                login.disabled=true;
+                login.textContent="Logged In Successfully!"
+            })
+            .catch(function(error){
+                console.log(error);
+                login.disabled=true;
+                login.textContent="Logged In Successfully!"
+            })
+        }
+            //Handle Account Status
+             firebase.auth().onAuthStateChanged(function(user)
+            {
+            if(user) {
+                window.location.href = 'dashboard.html';
+            }
+            });
+      </script>
+</body>
+</html>
