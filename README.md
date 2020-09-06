@@ -47,5 +47,5 @@
 2. [Aagam Jain](https://www.linkedin.com/in/aagam-jain-b5760619a/)
 ## :page_with_curl: Licence 
 
-- [MIT License](https://github.com/thesauravkarmakar/SwasthAIO/blob/master/LICENSE) 
+- [GPLv3 license](https://github.com/thesauravkarmakar/SwasthAIO/blob/master/LICENSE) 
 - Copyright 2020 :copyright: Team - Aatmanirbhar Bharat.
