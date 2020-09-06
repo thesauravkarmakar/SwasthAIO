@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Portal</title>
+
+     <!-- BOOTSTRAP & JQUERY -->   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+            
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="../static/css/style_por.css">
+</head>
+<body>
+    <div class="wrapper" style="background-image: url('../static/img/portal_background.jpg')">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="../static/img/portal_signup_left.jpg">
+            </div>
+
+            <form action="">
+                <h3>New User</h3>
+                <div class="form-wrapper">
+                    <input id="email" type="email" placeholder="Email ID" class="form-control">
+                    <i class="zmdi zmdi-email"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input id="password" type="password" placeholder="Password" class="form-control">
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input id="confirmPassword" type="password" placeholder="Confirm Password" class="form-control">
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <div class="form-group container-login100-form-btn">
+                    <button  onclick="signUp()" id="btn-signup" type="button">
+                        Register
+                        <i class="zmdi zmdi-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="w-full text-center" style="margin-top: 20%; font-size: 15px;">
+                    <a href="../templates/portal.html" class="text-dark">
+                        Already have an account?
+                    </a>       
+                </div>
+            </form>
+        </div>
+    </div>
+        <!-- FIREBASE -->
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyAfkFk5yr_SBWm99EB2b3A7oAq5gAOTprY",
+              authDomain: "swasthai-9e4a8.firebaseapp.com",
+              databaseURL: "https://swasthai-9e4a8.firebaseio.com",
+              projectId: "swasthai-9e4a8",
+              storageBucket: "swasthai-9e4a8.appspot.com",
+              messagingSenderId: "164428875159",
+              appId: "1:164428875159:web:c9349dd2a60458aa1df0d2"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            
+            var signup=document.getElementById("btn-signup")
+            var emailSignup=document.getElementById("email")
+            var passwordSignup=document.getElementById("password")
+
+            signup.onclick=function() {
+                signup.disabled=true;
+                signup.textContent="Creating Your Account....";
+                firebase.auth().createUserWithEmailAndPassword(emailSignup.value,passwordSignup.value).then(function(response)
+                {
+                    
+                    sendingVerifyEmail(signup);
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    signup.disabled=false;
+                    signup.textContent="Sign Up Successfully!";
+                    console.log(error);
+                })
+            }
+            function sendingVerifyEmail(button) {
+                firebase.auth().currentUser.sendEmailVerification().then(function(response) {
+                    signup.disabled=false;
+                    signup.textContent="Sign Up Successfully!";
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    signup.disabled=false;
+                    signup.textContent="Sign Up Successfully!";
+                    console.log(error);
+                })
+            }
+            //Handle Account Status
+            firebase.auth().onAuthStateChanged(function(user)
+            {
+            if(user) {
+                window.location.href = '../templates/dashboard.html';
+            }
+            });
+          </script>
+</body>
+</html>

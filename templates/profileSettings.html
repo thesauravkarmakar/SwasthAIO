@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>My Portal</title>
+    <title>Profile Settings</title>
 
      <!-- BOOTSTRAP & JQUERY -->   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,23 +11,28 @@
    
         
     <!-- MATERIAL DESIGN ICONIC FONT -->
-    <link rel="stylesheet" href="resources/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-
-    <!-- STYLE CSS -->        
-    <link rel="stylesheet" href="design_files/css/style.css">
+    <link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+            
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="../static/css/style_por.css">
 </head>
 <body>
-    <div class="wrapper" style="background-image: url('resources/img/portal_background.jpg')">
+    <div class="wrapper" style="background-image: url('../static/img/portal_background.jpg')">
         <div class="inner">
             <div class="image-holder">
-                <img src="resources/img/portal_signup_left.jpg">
+                <img src="../resources/img/portal_signup_left.jpg">
             </div>
 
             <form action="">
-                <h3>New User</h3>
+                <h3>Account Settings</h3>
+                <div class="form-group">
+                    <input id="firstName" type="text" placeholder="First Name" class="form-control">
+                    <input id="lastName" type="text" placeholder="Last Name" class="form-control">
+                </div>
                 <div class="form-wrapper">
-                    <input id="email" type="email" placeholder="Email ID" class="form-control">
-                    <i class="zmdi zmdi-email"></i>
+                    <select name="" id="country" class="form-control">
+                        <option value="" disabled selected>Country</option>
+                    </select>
                 </div>
                 <div class="form-wrapper">
                     <input id="password" type="password" placeholder="Password" class="form-control">
@@ -44,7 +49,7 @@
                     </button>
                 </div>
                 <div class="w-full text-center" style="margin-top: 20%; font-size: 15px;">
-                    <a href="portal.html" class="text-dark">
+                    <a href="../templates/portal.html" class="text-dark">
                         Already have an account?
                     </a>       
                 </div>
@@ -105,7 +110,7 @@
             firebase.auth().onAuthStateChanged(function(user)
             {
             if(user) {
-                window.location.href = 'dashboard.html';
+                window.location.href = '../templates/dashboard.html';
             }
             });
           </script>

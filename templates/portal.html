@@ -11,17 +11,17 @@
    
         
     <!-- MATERIAL DESIGN ICONIC FONT -->
-    <link rel="stylesheet" href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
             
     <!-- STYLE CSS -->
-    <link rel="stylesheet" href="design_files/css/style.css">
+    <link rel="stylesheet" href="../static/css/style_por.css">
 
 </head>
 <body>
-    <div class="wrapper" style="background-image: url('resources/img/portal_background.jpg')">
+    <div class="wrapper" style="background-image: url('../static/img/portal_background.jpg')">
         <div class="inner">
             <div class="image-holder">
-                <img src="resources/img/portal_signup_left.jpg">
+                <img src="../static/img/portal_signup_left.jpg">
             </div>
 
             <form action="">
@@ -43,12 +43,12 @@
                     <span class="text-muted">
                         Forgot 
                     </span>
-                    <a href="forgetPassword.html" class="text-dark">
+                    <a href="../templates/forgetPassword.html" class="text-dark">
                         Username or Password?
                     </a>       
                 </div>
                 <div class="w-full text-center" style="margin-top: 35%; font-size: 15px;">
-                    <a href="signup.html" class="text-dark">
+                    <a href="../templates/signup.html" class="text-dark">
                         Not have an account? Sign Up
                     </a>       
                 </div>
@@ -97,7 +97,7 @@
              firebase.auth().onAuthStateChanged(function(user)
             {
             if(user) {
-                window.location.href = 'dashboard.html';
+                window.location.href = '../templates/dashboard.html';
             }
             });
       </script>
