@@ -17,7 +17,7 @@
 
 ## :film_projector: Demo
 <p align="center">
-<img src="" alt="Demo">
+<img src="https://github.com/thesauravkarmakar/SwasthAIO/blob/master/static/assets/demo.gif" alt="Demo">
 </p>
 
 ## :man_technologist: Technology Stack
