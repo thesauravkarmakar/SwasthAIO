@@ -2,15 +2,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap"); 
 
-
 body{
     margin: 0px;
     padding: 0px;
     background: url(../img/DR.jpg);
     background-size: cover;
 }
+
 .container{
-    width: 1500px;
+    width: 100%;
     height: auto;
     align-items: center;
     justify-content: center;

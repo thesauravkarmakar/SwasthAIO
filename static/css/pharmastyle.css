@@ -1,3 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #eaeaea;
+}
+
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  font-family: Roboto;
+  }
+  
+  header ul{
+  position: relative;
+  display: flex;
+  }
+  
+  header ul li{
+  position: relative;
+  list-style: none;
+  }
+  
+  header ul li a{
+  position: relative;
+  padding: 10px 15px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: larger;
+  font-family: Roboto;
+  }
+
+  .wrapper .header {
+    background: #0099ff;
+  }
+
+  .wrapper .title {
+    padding: 50px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+  }
+
+
 a{
   text-decoration: none;
 }
@@ -7,11 +69,12 @@ body{
 }
 
 #gmap {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 img{
   display: inline-block;
+  justify-content: center;
 }
 
 .column {
@@ -35,5 +98,7 @@ tr:hover {
 }
 
 h2{
-  color: rgb(255, 0, 0);
+  color: black;
+  text-align: center;
+  width:100%;
 }
