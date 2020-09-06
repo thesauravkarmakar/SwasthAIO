@@ -16,13 +16,15 @@ body {
 header{
   position: fixed;
   width: 100%;
-  height: 75px;
+  height: 80px;
   padding: 0px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
-  font-family: Roboto;
+  background: #0099ff;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  color: white;
   }
   
   header ul{
@@ -43,8 +45,12 @@ header{
   text-decoration: none;
   cursor: pointer;
   font-weight: 400;
-  font-size: larger;
   font-family: Roboto;
+  }
+  
+  header ul li a:hover{
+  border-bottom: 3px solid red;
+  color: red;
   }
 
   .wrapper .header {
@@ -57,6 +63,7 @@ header{
     font-weight: 700;
     font-size: 32px;
     color: #fff;
+    z-index: 2;
   }
 
 
@@ -66,15 +73,6 @@ a{
 
 body{
   max-height: 100vh;
-}
-
-#gmap {
-  padding: 0 20px;
-}
-
-img{
-  display: inline-block;
-  justify-content: center;
 }
 
 .column {
@@ -87,6 +85,7 @@ img{
   display: table;
   clear: both;
 }
+
 th, td {
   padding: 5px;
   text-align: left;

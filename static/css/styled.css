@@ -46,6 +46,10 @@ header{
   font-family: Roboto;
   }
   
+  header ul li a:hover{
+    border-bottom: 3px solid red;
+    color: red;
+    }
 
 .wrapper .header {
   background: #0099ff;
