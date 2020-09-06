@@ -47,7 +47,7 @@ For different queries regarding Healthcare, people search on the Internet be it 
     <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" width="64" height="64" style="width:100%">
 </p>
 
-## Future Works of SwasthAIO
+## :clipboard: Future Works of SwasthAIO
 - [ ] We will build a Deep Learning based Symptom Checker, so it can accurately tell what are you facing and can recommend appropriate Doctors and Medicines.
 
 ## :man_in_tuxedo: Author
