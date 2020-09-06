@@ -1,6 +1,5 @@
 <p align="center">
   <img src="https://github.com/thesauravkarmakar/SwasthAIO/blob/master/static/img/logo.png" width="200" height="200"/>
-  <h1>Advanced Healthcare Made Personal</h1>
 </p>
 
 [![Website Status](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
@@ -11,8 +10,6 @@
 [![CSS](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 <img src="https://hackgujarat.com/assets/img/Logo2-01.png" width="150" height="50"/>
 
-#### 
-
 ## :seedling: About SwasthAIO
 For different queries regarding Healthcare, people search on the Internet be it for Doctor's appointment or finding Medical Store nearby. They get a various response to their queries creating confusion which Doctor to go for or where to buy original medicines. Here comes, SwasthAIO, where we tried to create a user-friendly portal which is 100% transparent and in which everyone can search all medical-related issues in a "Single" Trusted Website. 
 
@@ -22,13 +19,12 @@ For different queries regarding Healthcare, people search on the Internet be it 
 3. On-the-go Medical Records
 
 
-
 ## :film_projector: Demo
 <p align="center">
 <img src="https://github.com/thesauravkarmakar/SwasthAIO/blob/master/static/assets/demo.gif" alt="Demo">
 </p>
 
-![YouTube Link][https://youtu.be/wpfXgi7zQ20(https://youtu.be/wpfXgi7zQ20]
+<img src="https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png" width="21" height="21"/>[Youtube Link](https://youtu.be/wpfXgi7zQ20) 
 
 ## :man_technologist: Technology Stack
 
@@ -52,7 +48,7 @@ For different queries regarding Healthcare, people search on the Internet be it 
 </p>
 
 ## Future Works of SwasthAIO
-We will build a Deep Learning based Symptom Checker, so it can accurately tell what are you facing and can recommend appropriate Doctors and Medicines.
+- [ ] We will build a Deep Learning based Symptom Checker, so it can accurately tell what are you facing and can recommend appropriate Doctors and Medicines.
 
 ## :man_in_tuxedo: Author
 1. [Saurav Karmakar](https://www.linkedin.com/in/sauravkarmakar/)
