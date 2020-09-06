@@ -2,19 +2,38 @@ a{
   text-decoration: none;
 }
 
-.online{
-  display: inline-flex;
-  text-align: justify;
-  width: 100px;
+body{
+  max-height: 100vh;
+}
+
+#gmap {
+  padding: 0 15px;
 }
 
 img{
-  display: block;
-  margin: 0 auto;
-  float: left;
+  display: inline-block;
 }
 
-.map{
+.column {
   float: left;
   width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #ccc;
+}
+
+h2{
+  color: rgb(255, 0, 0);
 }

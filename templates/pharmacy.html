@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/pharmastyle.css">
     <title>Pharmacy locations</title>
 </head>
+
 <body>
-    <div class="map">
-        <div class="gmap">
-            <iframe width="600" height="600" id="gmap"
-                src="https://maps.google.com/maps?q=pharmacy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <div class="row">
+        <div class="column" style="background-color: #aaa;height: 620px; width:50%">
+            <h2 style="padding: 10px;">Stores Nearby:</h2>
+            <div class="map" style="width: 50%; float:left;">
+                <div class="gmap">
+                    <iframe width="620" height="505" id="gmap"
+                        src="https://maps.google.com/maps?q=pharmacy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="column" style="background-color: #bbb; height: 620px; width:50%">
+                <h2 style="padding: 10px;">Online Stores:</h2>
+                <!--<div class="images">
+            <a href="https://www.1mg.com/" target="_blank"><p>1mg</p></a><img src="resources/images/1mg.png" height="100" width="100">
+            <a href="https://www.medlife.com/" target="_blank"><img src="resources/images/Medlife.png" height="100"
+                    width="100"> Medlife</a>
+            <a href="https://pharmeasy.in/" target="_blank"><img src="resources/images/Pharmeasy.png" height="100"
+                    width="100"> Pharmeasy</a>
+            <a href="https://www.netmeds.com/" target="_blank"><img src="resources/images/Netmeds.png" height="100"
+                    width="100"> Netmeds</a>
+        </div>-->
+                <table style= "padding: 0px 100px;">
+                    <tr>
+                        <td><a href="https://www.1mg.com/" target="_blank">1mg</a></td>
+                        <td><a href="https://www.1mg.com/" target="_blank"><img src="resources/images/1mg.png" height="100" width="100"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.medlife.com/" target="_blank">Medlife</a></td>
+                        <td><a href="https://www.medlife.com/" target="_blank"><img src="resources/images/Medlife.png" height="100" width="100"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://pharmeasy.in/" target="_blank">Pharmeasy</a></td>
+                        <td><a href="https://pharmeasy.in/" target="_blank"><img src="resources/images/Pharmeasy.png" height="100" width="100"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.netmeds.com/" target="_blank">Netmeds</a></td>
+                        <td><a href="https://www.netmeds.com/" target="_blank"><img src="resources/images/Netmeds.png" height="100" width="100"></a></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-    <div class="online">
-        <p>Online Orders: </p>
-        <a href="https://www.1mg.com/" target="_blank"><img src="resources/images/1mg.png" height="100" width="100"> 1mg</a>
-        <a href="https://www.medlife.com/" target="_blank"><img src="resources/images/Medlife.png" height="100" width="100"> Medlife</a>
-        <a href="https://pharmeasy.in/" target="_blank"><img src="resources/images/Pharmeasy.png" height="100" width="100"> Pharmeasy</a>
-        <a href="https://www.netmeds.com/" target="_blank"><img src="resources/images/Netmeds.png" height="100" width="100"> Netmeds</a>
-    </div>
 </body>
+
 </html>
