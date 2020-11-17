@@ -3,68 +3,99 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/pharmastyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/pharmastyle.css">
     <link rel="icon" href="../static/icons/favicon-32x32.png">
     <title>Pharmacy</title>
 </head>
 
 <body>
-<header id="header">
-        <h1 class="title" style="align-items: center; color: white;">SWASTH AIO</h1>
+    <header id="header">
+        <h1 class="TITLE">SWASTH AIO</h1>
         <h1 id="Heading">Finding medicines?</h1>
         <ul>
             <li><a href="../index.html">Home</a></li>
         </ul>
-        
-</header>
-<div class="wrapper">
-    <div class="header">
-      <div class="title">
-      </div>
-    </div>
-    <div class="row">
-        <div class="column" style="background-color: white;height: 620px; width:50%; display:flex; flex-direction: column; align-items: center;">
-            <h2 style="padding: 10px;">Stores Nearby:</h2>
-            <div class="map" style="width: 50%; float:left;">
-                <div class="gmap">
-                    <iframe width="620" height="505" id="gmap"
-                        src="https://maps.google.com/maps?q=pharmacy&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </header>
+    <!-- <div class="wrapper">
+        <div class="row">
+            <div class="column">
+                <h2>Stores Nearby</h2>
+                <div class="map">
+                    <div class="gmap">
+                        <iframe height="505" id="gmap"
+                            src="https://maps.google.com/maps?q=pharmacy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <h2 id="online">Online Stores</h2>
+                <div class="stores">
+                    <table>
+                        <tr>
+                            <td><a class="names" href="https://www.netmeds.com/" target="_blank"><img
+                                        src="../static/img/Netmeds.png" height="100" width="100"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="names" href="https://www.1mg.com/" target="_blank"><img
+                                        src="../static/img/1mg.png" height="100" width="100"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="names" href="https://www.medlife.com/" target="_blank"><img
+                                        src="../static/img/Medlife.png" height="100" width="100"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="names" href="https://pharmeasy.in/" target="_blank"><img
+                                        src="../static/img/Pharmeasy.png" height="100" width="100"></a></td>
+                        </tr>
                 </div>
             </div>
         </div>
-        <div class="column" style="background-color: white; height: 620px; width:50%; display:flex; flex-direction: column; align-items: center;">
-                <h2 style="padding: 10px;">Online Stores:</h2>
-                <!--<div class="images">
-            <a href="https://www.1mg.com/" target="_blank"><p>1mg</p></a><img src="resources/images/1mg.png" height="100" width="100">
-            <a href="https://www.medlife.com/" target="_blank"><img src="resources/images/Medlife.png" height="100"
-                    width="100"> Medlife</a>
-            <a href="https://pharmeasy.in/" target="_blank"><img src="resources/images/Pharmeasy.png" height="100"
-                    width="100"> Pharmeasy</a>
-            <a href="https://www.netmeds.com/" target="_blank"><img src="resources/images/Netmeds.png" height="100"
-                    width="100"> Netmeds</a>
-        </div>-->
-                <table style= "padding: 0px 100px;">
-                    <tr>
-                        <td><a href="https://www.netmeds.com/" target="_blank">Netmeds</a></td>
-                        <td><a href="https://www.netmeds.com/" target="_blank"><img src="../static/img/Netmeds.png" height="80" width="130"></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.1mg.com/" target="_blank">1mg</a></td>
-                        <td><a href="https://www.1mg.com/" target="_blank"><img src="../static/img/1mg.png" height="80" width="90"></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.medlife.com/" target="_blank">Medlife</a></td>
-                        <td><a href="https://www.medlife.com/" target="_blank"><img src="../static/img/Medlife.png" height="100" width="150"></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://pharmeasy.in/" target="_blank">Pharmeasy</a></td>
-                        <td><a href="https://pharmeasy.in/" target="_blank"><img src="../static/img/Pharmeasy.png" height="100" width="100"></a></td>
-                    </tr>
-                </table>
+    </div> -->
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <div class="maps">
+                <div class="name">
+                    <h2>Stores Nearby</h2>
+                </div>
+                <div class="map">
+                    <div class="gmap">
+                        <iframe height="505" id="gmap"
+                            src="https://maps.google.com/maps?q=pharmacy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col span_1_of_2">
+            <div class="icons">
+                <div class="name">
+                    <h2 id="online">Online Stores</h2>
+                </div>
+                <div class="stores">
+                    <table>
+                        <tr>
+                            <td><a class="names" href="https://www.netmeds.com/" target="_blank"><img
+                                        src="../static/img/Netmeds.png" height="100" width="100"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="names" href="https://www.1mg.com/" target="_blank"><img
+                                        src="../static/img/1mg.png" height="100" width="100"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="names" href="https://www.medlife.com/" target="_blank"><img
+                                        src="../static/img/Medlife.png" height="100" width="100"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="names" href="https://pharmeasy.in/" target="_blank"><img
+                                        src="../static/img/Pharmeasy.png" height="100" width="100"></a></td>
+                        </tr>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
